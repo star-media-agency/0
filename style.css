@@ -728,6 +728,35 @@ img{ max-width: 100%; display: block; }
     transform:translateY(-3px);
 }
 
+.btn-service{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:18px;
+    padding:12px 22px;
+    border-radius:50px;
+    background:#111827;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    position: relative;
+}
+
+.btn-service:hover{
+    background:#6C63FF;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+.btn-service i{
+    transition:.3s;
+}
+
+.btn-service:hover i{
+    transform:translateX(5px);
+}
+
 /* =================================================================
    WHY US
    ================================================================= */
