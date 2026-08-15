@@ -1455,3 +1455,106 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 28px;
   }
 }
+
+
+/* Creative Pricing Button */
+
+.pricing-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  padding: 14px 20px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7,
+    #ec4899
+  );
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 20px rgba(124, 58, 237, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+
+/* Shine Effect */
+
+.pricing-btn::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.45),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: 0.6s;
+}
+
+
+/* Hover */
+
+.pricing-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.4);
+}
+
+.pricing-btn:hover::before {
+  left: 130%;
+}
+
+
+/* Arrow */
+
+.pricing-btn::after {
+  content: "↗";
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.2);
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.pricing-btn:hover::after {
+  transform: rotate(45deg);
+  background: rgba(255,255,255,0.3);
+}
