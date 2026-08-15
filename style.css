@@ -1180,3 +1180,278 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     margin-top: 15px;
     font-weight: 600;
 }
+
+
+
+/* =========================
+   PRICING SECTION
+========================= */
+
+.pricing-section {
+  padding: 100px 6%;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+
+/* Header */
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.pricing-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(124, 58, 237, 0.1);
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.pricing-header h2 {
+  font-size: 48px;
+  margin: 0 0 12px;
+  font-weight: 800;
+  color: #11152f;
+}
+
+.pricing-header h2 span {
+  color: #7c3aed;
+}
+
+.pricing-header p {
+  color: #777;
+  font-size: 17px;
+  margin: 0;
+}
+
+
+/* Grid */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+/* Card */
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #eeeeF5;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(40, 30, 80, 0.08);
+  transition: all 0.35s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(100, 60, 180, 0.18);
+}
+
+
+/* Image */
+
+.service-image {
+  width: 100%;
+  height: 210px;
+  background: #f8f7ff;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pricing-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+
+/* Content */
+
+.pricing-content {
+  padding: 25px 22px 28px;
+  text-align: center;
+}
+
+.pricing-content h3 {
+  color: #11152f;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0 0 15px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Price */
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.old-price {
+  color: #999;
+  font-size: 15px;
+  text-decoration: line-through;
+  text-decoration-color: #e74c3c;
+  margin-bottom: 3px;
+}
+
+.new-price {
+  color: #7138d4;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+/* Details */
+
+.service-details {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 45px;
+  margin: 0 0 20px;
+}
+
+
+/* Features */
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 20px;
+  text-align: left;
+}
+
+.features li {
+  color: #555;
+  font-size: 14px;
+  margin: 9px 0;
+}
+
+
+/* Button */
+
+.pricing-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: #7138d4;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+  background: #5825b5;
+  transform: translateY(-2px);
+}
+
+
+/* Most Popular */
+
+.featured-card {
+  border: 2px solid #7138d4;
+}
+
+.popular-label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #7138d4;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-header h2 {
+    font-size: 40px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .pricing-section {
+    padding: 70px 20px;
+  }
+
+  .pricing-header {
+    margin-bottom: 35px;
+  }
+
+  .pricing-header h2 {
+    font-size: 34px;
+  }
+
+  .pricing-header p {
+    font-size: 15px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-image {
+    height: 230px;
+  }
+
+  .pricing-content {
+    padding: 22px 20px 25px;
+  }
+
+  .new-price {
+    font-size: 28px;
+  }
+}
