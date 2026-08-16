@@ -4,23 +4,43 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ---------------------------------------------------------------
+     1. LOADING SCREEN
+     --------------------------------------------------------------- */
   const loader = document.getElementById('loader');
   window.addEventListener('load', function () {
-    setTimeout(function () { loader.classList.add('hide'); }, 500);
+    setTimeout(function () {
+      loader.classList.add('hide');
+    }, 500);
   });
+  // Fallback in case 'load' fires slowly / CDN blocked
   setTimeout(function () { loader.classList.add('hide'); }, 2500);
 
+  /* ---------------------------------------------------------------
+     2. AOS INIT
+     --------------------------------------------------------------- */
   if (window.AOS) {
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 60 });
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60
+    });
   }
 
+  /* ---------------------------------------------------------------
+     3. STICKY NAVBAR ON SCROLL + ACTIVE LINK
+     --------------------------------------------------------------- */
   const navbarWrap = document.getElementById('navbarWrap');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   function onScroll() {
-    if (window.scrollY > 40) navbarWrap.classList.add('scrolled');
-    else navbarWrap.classList.remove('scrolled');
+    if (window.scrollY > 40) {
+      navbarWrap.classList.add('scrolled');
+    } else {
+      navbarWrap.classList.remove('scrolled');
+    }
 
     let current = '';
     sections.forEach((sec) => {
@@ -29,9 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     navLinks.forEach((link) => {
       link.classList.remove('active-link');
-      if (link.getAttribute('href') === '#' + current) link.classList.add('active-link');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active-link');
+      }
     });
 
+    // Back to top button visibility
     const backToTop = document.getElementById('backToTop');
     if (window.scrollY > 500) backToTop.classList.add('show');
     else backToTop.classList.remove('show');
@@ -39,12 +62,17 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('scroll', onScroll);
   onScroll();
 
+  /* ---------------------------------------------------------------
+     4. MOBILE NAV TOGGLE
+     --------------------------------------------------------------- */
   const navToggle = document.getElementById('navToggle');
   const navCollapse = document.getElementById('navCollapse');
+
   navToggle.addEventListener('click', function () {
     navToggle.classList.toggle('open');
     navCollapse.classList.toggle('open');
   });
+
   navLinks.forEach((link) => {
     link.addEventListener('click', function () {
       navToggle.classList.remove('open');
@@ -52,10 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------------------------------------------------------------
+     5. BACK TO TOP CLICK
+     --------------------------------------------------------------- */
   document.getElementById('backToTop').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* ---------------------------------------------------------------
+     6. ANIMATED COUNTERS (About stats)
+     --------------------------------------------------------------- */
   const counters = document.querySelectorAll('.counter');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -71,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const target = parseInt(el.getAttribute('data-target'), 10);
     const duration = 1600;
     const start = performance.now();
+
     function tick(now) {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -81,62 +116,98 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(tick);
   }
 
+  /* ---------------------------------------------------------------
+     7. PORTFOLIO FILTER
+     --------------------------------------------------------------- */
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
+
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', function () {
       filterBtns.forEach((b) => b.classList.remove('active'));
       this.classList.add('active');
       const filter = this.getAttribute('data-filter');
+
       portfolioItems.forEach((item) => {
         const cat = item.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) item.classList.remove('filtered-out');
-        else item.classList.add('filtered-out');
+        if (filter === 'all' || cat === filter) {
+          item.classList.remove('filtered-out');
+        } else {
+          item.classList.add('filtered-out');
+        }
       });
     });
   });
 
+  /* ---------------------------------------------------------------
+     8. PORTFOLIO LIGHTBOX
+     --------------------------------------------------------------- */
   const lightbox = document.getElementById('lightbox');
   const lightboxContent = document.getElementById('lightboxContent');
   const lightboxClose = document.getElementById('lightboxClose');
+
   portfolioItems.forEach((item) => {
     item.addEventListener('click', function () {
       const thumb = this.querySelector('.portfolio-thumb');
       const title = this.querySelector('h6') ? this.querySelector('h6').textContent : '';
       const category = this.querySelector('span') ? this.querySelector('span').textContent : '';
+
       lightboxContent.innerHTML = '';
       const clone = document.createElement('div');
       clone.style.width = '100%';
       clone.style.height = '100%';
-      clone.style.background = getComputedStyle(thumb).backgroundImage !== 'none' ? getComputedStyle(thumb).backgroundImage : getComputedStyle(thumb).background;
+      clone.style.background = getComputedStyle(thumb).backgroundImage !== 'none'
+        ? getComputedStyle(thumb).backgroundImage
+        : getComputedStyle(thumb).background;
       clone.style.display = 'flex';
       clone.style.alignItems = 'flex-end';
       clone.style.padding = '28px';
+
       const label = document.createElement('div');
       label.innerHTML = '<h5 style="color:#fff;margin-bottom:4px;">' + title + '</h5><span style="color:#FF9A1F;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;">' + category + '</span>';
       clone.appendChild(label);
+
       lightboxContent.appendChild(clone);
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
   });
-  function closeLightbox() { lightbox.classList.remove('active'); document.body.style.overflow = ''; }
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
 
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  /* ---------------------------------------------------------------
+     9. TESTIMONIAL SWIPER
+     --------------------------------------------------------------- */
   if (window.Swiper) {
     new Swiper('.testimonial-swiper', {
       loop: true,
       spaceBetween: 26,
       autoplay: { delay: 5000, disableOnInteraction: false },
       pagination: { el: '.swiper-pagination', clickable: true },
-      breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } }
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1200: { slidesPerView: 3 }
+      }
     });
   }
 
+  /* ---------------------------------------------------------------
+     10. CONTACT FORM (front-end only demo submission)
+     --------------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
+
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     formSuccess.classList.add('show');
@@ -144,6 +215,9 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => formSuccess.classList.remove('show'), 6000);
   });
 
+  /* ---------------------------------------------------------------
+     11. BUTTON RIPPLE EFFECT
+     --------------------------------------------------------------- */
   document.querySelectorAll('.btn-ripple').forEach((btn) => {
     btn.addEventListener('click', function (e) {
       const rect = this.getBoundingClientRect();
@@ -158,6 +232,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------------------------------------------------------------
+     12. MOUSE GLOW EFFECT (desktop only)
+     --------------------------------------------------------------- */
   const mouseGlow = document.getElementById('mouseGlow');
   if (window.matchMedia('(min-width: 992px)').matches) {
     document.addEventListener('mousemove', function (e) {
@@ -165,41 +242,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---------------------------------------------------------------
-     AD ACCOUNT CARD — injected into the existing pricing grid
-     --------------------------------------------------------------- */
-  const pricingGrid = document.querySelector('.pricing-grid');
-  if (pricingGrid && !pricingGrid.querySelector('[data-ad-account-card]')) {
-    const card = document.createElement('div');
-    card.className = 'pricing-card';
-    card.setAttribute('data-ad-account-card', 'true');
-    card.innerHTML = `
-      <div class="service-image" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111827,#1f2937);">
-        <div style="width:110px;height:110px;border-radius:28px;display:grid;place-items:center;background:linear-gradient(135deg,#ff3b9d,#7c3aed);box-shadow:0 15px 45px rgba(124,58,237,.35);">
-          <i class="fa-solid fa-bullhorn" style="font-size:48px;color:#fff;"></i>
-        </div>
-      </div>
-      <div class="pricing-content">
-        <h3>AD ACCOUNT</h3>
-        <p class="service-details">Facebook • Meta • TikTok</p>
-        <a href="ad-account.html" class="pricing-btn">Explore Details <i class="fa-solid fa-arrow-right"></i></a>
-      </div>`;
-    pricingGrid.appendChild(card);
-  }
-
 });
 
+
 emailjs.init("zAsfcL5J3f47ILrAp");
+
 const form = document.getElementById("contactForm");
+
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  emailjs.sendForm("service_t2jf91o", "template_wyq3t0m", this)
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_t2jf91o",
+        "template_wyq3t0m",
+        this
+    )
     .then(() => {
-      document.getElementById("formSuccess").style.display = "block";
-      form.reset();
+        document.getElementById("formSuccess").style.display = "block";
+        form.reset();
     })
     .catch((error) => {
-      console.error("EmailJS Error:", error);
-      alert("Failed to send message.");
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message.");
     });
 });
