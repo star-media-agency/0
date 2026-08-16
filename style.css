@@ -3134,3 +3134,263 @@ body {
 
 }
 
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.portfolio-btn {
+  width: 310px;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px 0 26px;
+
+  text-decoration: none;
+  color: white;
+
+  background: linear-gradient(
+    90deg,
+    #7439d8 0%,
+    #a942d4 55%,
+    #e63375 100%
+  );
+
+  border-radius: 50px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(159, 59, 211, 0.25);
+}
+
+.portfolio-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(230, 51, 117, 0.4);
+}
+
+.btn-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+.facebook-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  color: #8b3fd1;
+
+  border-radius: 50%;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.arrow-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  transition: 0.3s ease;
+}
+
+.portfolio-btn:hover .arrow-icon {
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .portfolio-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .portfolio-btn {
+    width: 100%;
+    max-width: 310px;
+  }
+
+}
+
+.arabic-card {
+    font-family: 'Cairo', sans-serif;
+    text-align: right;
+}
+
+.arabic-card h3,
+.arabic-card h4,
+.arabic-card h5,
+.arabic-card p,
+.arabic-card li,
+.arabic-card .price,
+.arabic-card .offer-btn {
+    font-family: 'Cairo', sans-serif;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 25px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.features-list li i {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.special-offer {
+    margin: 30px 0 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(116, 57, 216, 0.18),
+        rgba(230, 51, 117, 0.18)
+    );
+
+    text-align: center;
+}
+
+.offer-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    margin-bottom: 15px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        90deg,
+        #7439d8,
+        #e63375
+    );
+
+    color: #fff;
+
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.offer-label i {
+    font-size: 12px;
+}
+
+.offer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-title {
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.special-offer .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.special-offer .old {
+    color: #999;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.special-offer .new {
+    color: #fff;
+    font-family: 'Cairo', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.discount-badge {
+    padding: 5px 10px;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffcf4a;
+
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+
+.service-note {
+    margin: 18px 0;
+    padding: 12px 15px;
+
+    border-right: 3px solid #a942d4;
+
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+
+    color: #bdbdbd;
+
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.service-note i {
+    margin-left: 6px;
+    color: #c45cff;
+}
