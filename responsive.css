@@ -1,234 +1,67 @@
-/* =================================================================
-   STAR MEDIA AGENCY — RESPONSIVE STYLESHEET
-   ================================================================= */
+/* =========================================
+   GLOBAL RESPONSIVE FIX
+========================================= */
 
-/* ---------- Tablets & below (≤ 991px) ---------- */
-@media (max-width: 991.98px){
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-  .navbar-toggler{ display: flex; }
-
-  .nav-collapse{
-    position: fixed;
-    top: 0; right: 0;
-    height: 100vh;
-    width: min(320px, 82vw);
-    background: rgba(7,11,22,0.98);
-    backdrop-filter: blur(20px);
-    border-left: 1px solid var(--border);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px 34px;
-    transform: translateX(100%);
-    transition: transform .45s cubic-bezier(.4,0,.2,1);
-    z-index: 999;
-  }
-  .nav-collapse.open{ transform: translateX(0); }
-
-  .nav-links{
-    flex-direction: column;
-    align-items: flex-start;
+html,
+body {
     width: 100%;
-    gap: 4px;
-  }
-  .nav-link{ width: 100%; padding: 14px 16px; font-size: 1rem; }
-  .nav-link::after{ display: none; }
-
-  .btn-cta.d-lg-none{ width: 100%; justify-content: center; }
-
-  .hero{ padding-top: 130px; text-align: left; }
-  .hero-btns{ justify-content: flex-start; }
-
-  .stats-grid{ margin-top: 40px; }
-
-  .portfolio-grid{ columns: 2 240px; }
-
-  .process-timeline::before{ display: none; }
-  .process-timeline{ justify-content: center; }
-  .process-step{ min-width: 45%; margin-bottom: 26px; }
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* ---------- Small tablets / large phones (≤ 767px) ---------- */
-@media (max-width: 767.98px){
-
-  .section{ padding: 84px 0; }
-
-  .hero{ min-height: auto; padding-top: 120px; padding-bottom: 80px; }
-  .hero-logo{ height: 52px; }
-  .hero-title{ font-size: clamp(2.1rem, 9vw, 2.8rem); }
-  .hero-desc{ font-size: .95rem; }
-  .hero-btns{ flex-direction: column; }
-  .hero-btns a{ width: 100%; text-align: center; }
-
-  .stats-grid{ grid-template-columns: 1fr 1fr; gap: 14px; }
-  .stat-card{ padding: 24px 14px; }
-  .stat-card h3, .stat-card > span{ font-size: 2rem; }
-
-  .portfolio-grid{ columns: 1 100%; }
-
-  .process-step{ min-width: 100%; }
-
-  .contact-form{ padding: 26px; }
-
-  .map-placeholder{ margin-top: 40px; min-height: 200px; }
-
-  #backToTop{ width: 44px; height: 44px; bottom: 20px; right: 20px; }
-
-  .footer{ text-align: center; }
-  .footer p{ margin-left: auto; margin-right: auto; }
-  .footer .col-lg-3, .footer .col-lg-2{ margin-top: 10px; }
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
 }
-
-/* ---------- Small phones (≤ 480px) ---------- */
-@media (max-width: 480px){
-  .brand-logo{ height: 38px; }
-  .hero-eyebrow{ font-size: .72rem; }
-  .btn-primary-glow, .btn-outline-glow{ padding: 14px 24px; font-size: .88rem; }
-  .section-title{ font-size: 1.7rem; }
-  .service-card, .feature-card{ padding: 26px 20px; }
-  .testimonial-card{ padding: 26px 22px; }
-}
-
-
-/* =========================
-   AD ACCOUNT MOBILE FIX
-========================= */
-
-@media (max-width: 768px) {
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden !important;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .container,
-    .section,
-    .section-container,
-    .ad-account-container,
-    .ad-container,
-    .content-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-    }
-
-    .ad-account,
-    .ad-account-section,
-    .ad-account-page {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        overflow: hidden !important;
-    }
-
-    .cards,
-    .pricing-grid,
-    .services-grid,
-    .account-grid {
-        width: 100% !important;
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
-
-    .card,
-    .pricing-card,
-    .service-card,
-    .account-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    h1 {
-        font-size: clamp(32px, 9vw, 52px);
-        line-height: 1.1;
-    }
-
-    h2 {
-        font-size: clamp(26px, 7vw, 40px);
-    }
-
-    p {
-        max-width: 100%;
-        word-wrap: break-word;
-    }
-
-    .btn,
-    button,
-    a {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Ad Account cards */
-    .pricing-grid,
-    .services-grid,
-    .cards {
-        grid-template-columns: 1fr !important;
-        width: 100%;
-    }
-
-    .pricing-card,
-    .service-card,
-    .card {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
 
 
 /* =========================================
-   AD ACCOUNT MOBILE NAVBAR
+   DESKTOP
+========================================= */
+
+@media (min-width: 992px) {
+
+    .mobile-toggle {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .navbar-nav {
+        flex-direction: row !important;
+        align-items: center;
+    }
+
+}
+
+
+/* =========================================
+   TABLET + MOBILE
 ========================================= */
 
 @media (max-width: 991.98px) {
 
+    /* ---------- NAVBAR ---------- */
+
     .navbar.fixed-top {
         width: 100%;
-        background: #0b0918 !important;
         padding: 15px 20px !important;
         z-index: 9999;
     }
@@ -236,184 +69,473 @@
     .navbar.fixed-top .container {
         width: 100%;
         max-width: 100%;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    /* Logo */
-    .navbar.fixed-top .navbar-brand img {
-        width: 45px;
+
+    /* ---------- LOGO ---------- */
+
+    .navbar-brand img,
+    .brand-logo {
+        max-width: 160px;
         height: auto;
     }
 
-    /* Hamburger */
-    .navbar.fixed-top .mobile-toggle {
-        display: flex !important;
+
+    /* =========================================
+       MOBILE BUTTON
+    ========================================= */
+
+    .mobile-toggle {
         width: 48px;
         height: 48px;
+
+        display: flex !important;
         align-items: center;
         justify-content: center;
 
-        border: 1px solid rgba(255,255,255,.15);
+        margin-left: auto;
+
+        padding: 0 !important;
+
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 14px;
 
-        background: #171522;
-        margin-left: auto;
+        background: #171522 !important;
+
+        position: relative;
+        z-index: 10001;
     }
 
-    .navbar.fixed-top .navbar-toggler-icon {
-        filter: invert(1);
+
+    /* ☰ يظهر في البداية */
+
+    .mobile-toggle .menu-icon {
+        display: block !important;
+
+        color: white;
+        font-size: 28px;
+        line-height: 1;
     }
 
-    /* Mobile menu */
-    .navbar.fixed-top .navbar-collapse {
-        position: fixed;
+
+    /* ✕ يختفي في البداية */
+
+    .mobile-toggle .close-icon {
+        display: none !important;
+
+        color: white;
+        font-size: 25px;
+        line-height: 1;
+    }
+
+
+    /* لما المينيو تفتح */
+
+    .mobile-toggle[aria-expanded="true"] .menu-icon {
+        display: none !important;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .close-icon {
+        display: block !important;
+    }
+
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    .navbar-collapse {
+        position: fixed !important;
+
         top: 0;
-        right: -100%;
+        right: 0;
 
-        width: 80%;
-        max-width: 330px;
+        width: min(330px, 85vw) !important;
+        max-width: 100%;
+
         height: 100vh;
 
-        padding: 100px 30px 40px;
+        padding: 100px 25px 40px !important;
 
-        background: #0c0a18;
+        background: #0c0a18 !important;
 
-        display: flex !important;
         flex-direction: column;
+        align-items: center;
 
-        transition: right .35s ease;
+        overflow-y: auto;
 
-        z-index: 9998;
+        z-index: 10000;
+
+        transition: transform 0.35s ease !important;
+
+        transform: translateX(100%);
     }
+
+
+    /* Bootstrap لما القائمة تكون مقفولة */
+
+    .navbar-collapse.collapse:not(.show) {
+        display: flex !important;
+        transform: translateX(100%);
+    }
+
 
     /* لما القائمة تفتح */
-    .navbar.fixed-top .navbar-collapse.show {
-        right: 0;
+
+    .navbar-collapse.show {
+        display: flex !important;
+        transform: translateX(0);
     }
 
-    .navbar.fixed-top .navbar-nav {
+
+    /* أثناء الـ animation */
+
+    .navbar-collapse.collapsing {
+        display: flex !important;
+
+        height: 100vh !important;
+
+        transform: translateX(0);
+    }
+
+
+    /* =========================================
+       NAV LINKS
+    ========================================= */
+
+    .navbar-nav {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center;
+
         gap: 8px;
     }
 
-    .navbar.fixed-top .nav-link {
+
+    .navbar-nav .nav-item {
         width: 100%;
-        padding: 14px 10px !important;
-
-        color: #fff !important;
-        font-size: 16px;
-
-        text-align: center;
     }
 
-    .navbar.fixed-top .navbar-cta {
+
+    .navbar-nav .nav-link {
+        width: 100%;
+
+        padding: 14px 15px !important;
+
+        color: white !important;
+
+        text-align: center;
+
+        font-size: 16px;
+
+        border-radius: 10px;
+    }
+
+
+    /* =========================================
+       CTA BUTTON
+    ========================================= */
+
+    .navbar-cta {
         width: 100%;
         margin-top: 20px;
     }
 
-    .navbar.fixed-top .talk-btn {
+    .talk-btn {
         width: 100%;
+
         display: flex;
+
         justify-content: center;
         align-items: center;
     }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 130px;
+        padding-bottom: 80px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        line-height: 1.15;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    /* =========================================
+       GRIDS
+    ========================================= */
+
+    .portfolio-grid {
+        columns: 2 240px;
+    }
+
+    .process-timeline {
+        justify-content: center;
+    }
+
+    .process-timeline::before {
+        display: none;
+    }
+
+    .process-step {
+        min-width: 45%;
+        margin-bottom: 25px;
+    }
+
 }
 
 
-/* ================================
-   MOBILE MENU BUTTON
-================================ */
+/* =========================================
+   MOBILE
+========================================= */
 
-.mobile-toggle {
-    width: 48px;
-    height: 48px;
+@media (max-width: 767.98px) {
 
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+    .container,
+    .section-container,
+    .ad-account-container,
+    .ad-container,
+    .content-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    border-radius: 14px;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
 
-    background: #171522 !important;
 
-    padding: 0 !important;
+    .section {
+        padding: 70px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 70px;
+
+        text-align: center;
+    }
+
+    .hero-logo {
+        height: 52px;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-btns a,
+    .hero-btns button {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* CARDS */
+
+    .cards,
+    .pricing-grid,
+    .services-grid,
+    .account-grid,
+    .stats-grid {
+        width: 100%;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 16px;
+    }
+
+    .card,
+    .pricing-card,
+    .service-card,
+    .account-card,
+    .feature-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio-grid {
+        columns: 1 !important;
+    }
+
+
+    /* PROCESS */
+
+    .process-step {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+    /* CONTACT */
+
+    .contact-form {
+        padding: 24px 18px;
+    }
+
+    .map-placeholder {
+        margin-top: 30px;
+        min-height: 200px;
+    }
+
+
+    /* TEXT */
+
+    h1 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: clamp(26px, 7vw, 38px);
+        line-height: 1.2;
+    }
+
+    p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* BACK TO TOP */
+
+    #backToTop {
+        width: 44px;
+        height: 44px;
+
+        bottom: 20px;
+        right: 20px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar.fixed-top {
+        padding: 12px 15px !important;
+    }
+
+    .navbar-brand img,
+    .brand-logo {
+        max-width: 130px;
+    }
+
+    .mobile-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero {
+        padding-top: 105px;
+        padding-bottom: 60px;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.72rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .btn-primary-glow,
+    .btn-outline-glow {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.88rem;
+    }
+
+    .service-card,
+    .feature-card {
+        padding: 24px 18px;
+    }
+
+    .testimonial-card {
+        padding: 24px 18px;
+    }
+
+}
+
+.mobile-toggle,
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
     box-shadow: none !important;
 }
 
-/* 3 lines */
-.menu-icon {
-    color: white;
-    font-size: 28px;
-    line-height: 1;
+.mobile-toggle:focus,
+.mobile-toggle:active,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-/* X hidden initially */
-.close-icon {
-    display: none;
-    color: white;
-    font-size: 25px;
-    line-height: 1;
-}
-
-/* When menu is OPEN */
-.mobile-toggle[aria-expanded="true"] .menu-icon {
-    display: none;
-}
-
-.mobile-toggle[aria-expanded="true"] .close-icon {
-    display: block;
-}
-
-
-/* ================================
-   MOBILE NAV
-================================ */
-
-@media (max-width: 991.98px) {
-
-    .navbar-collapse {
-        position: fixed;
-
-        top: 0;
-        right: -100%;
-
-        width: 80%;
-        max-width: 330px;
-        height: 100vh;
-
-        background: #0c0a18;
-
-        padding: 100px 30px 40px;
-
-        display: flex !important;
-        flex-direction: column;
-
-        transition: right 0.35s ease;
-
-        z-index: 9998;
-    }
-
-    .navbar-collapse.show {
-        right: 0;
-    }
-
-    .navbar-nav {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .navbar-nav .nav-link {
-        color: white !important;
-        text-align: center;
-
-        padding: 14px !important;
-
-        font-size: 17px;
-    }
-
+.navbar-toggler::before,
+.navbar-toggler::after,
+.mobile-toggle::before,
+.mobile-toggle::after {
+    display: none !important;
 }
