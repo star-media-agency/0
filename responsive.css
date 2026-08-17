@@ -88,3 +88,132 @@
   .service-card, .feature-card{ padding: 26px 20px; }
   .testimonial-card{ padding: 26px 22px; }
 }
+
+
+/* =========================
+   AD ACCOUNT MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container,
+    .section,
+    .section-container,
+    .ad-account-container,
+    .ad-container,
+    .content-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .ad-account,
+    .ad-account-section,
+    .ad-account-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .cards,
+    .pricing-grid,
+    .services-grid,
+    .account-grid {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .card,
+    .pricing-card,
+    .service-card,
+    .account-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    h1 {
+        font-size: clamp(32px, 9vw, 52px);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: clamp(26px, 7vw, 40px);
+    }
+
+    p {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .btn,
+    button,
+    a {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ad Account cards */
+    .pricing-grid,
+    .services-grid,
+    .cards {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    .pricing-card,
+    .service-card,
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
