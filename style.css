@@ -3396,86 +3396,79 @@ body {
 }
 
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+@media (max-width: 991.98px) {
 
-* {
-    box-sizing: border-box;
-}
+    .mobile-toggle {
+        width: 58px !important;
+        height: 58px !important;
 
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+        padding: 0 !important;
+        margin-left: auto !important;
 
-@media (max-width: 768px) {
+        background: #171522 !important;
 
-    body {
-        width: 100%;
-        overflow-x: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        border-radius: 18px !important;
+
+        outline: none !important;
+        box-shadow: none !important;
+
+        position: fixed !important;
+        top: 18px !important;
+        right: 20px !important;
+
+        z-index: 10002 !important;
     }
 
-    section,
-    .container,
-    .hero,
-    .hero-section {
-        width: 100%;
-        max-width: 100%;
-    }
 
-    .hero {
-        min-height: 100vh;
-        padding: 120px 20px 40px;
-    }
+    /* الثلاث خطوط */
 
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
+    .hamburger {
+        width: 26px;
+        height: 20px;
 
-    .hero h1 {
-        font-size: clamp(42px, 12vw, 65px);
-        line-height: 1;
-        word-break: normal;
-    }
-
-    .hero p {
-        font-size: 18px;
-        line-height: 1.7;
-        max-width: 100%;
-    }
-
-    .hero-buttons {
-        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        justify-content: space-between;
+
+        position: relative;
     }
 
-    .hero-buttons a,
-    .hero-buttons button {
-        width: 100%;
-        max-width: 100%;
+    .hamburger span {
+        width: 26px;
+        height: 2px;
+
+        display: block;
+
+        background: #ffffff;
+        border-radius: 10px;
+
+        transition: 
+            transform 0.3s ease,
+            opacity 0.2s ease;
     }
 
-    /* Navbar */
-    .navbar {
-        width: 100%;
-        max-width: 100%;
+
+    /* لما القائمة تفتح */
+
+    .mobile-toggle[aria-expanded="true"] 
+    .hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
     }
 
-    .menu-toggle {
-        display: flex;
+    .mobile-toggle[aria-expanded="true"] 
+    .hamburger span:nth-child(2) {
+        opacity: 0;
     }
+
+    .mobile-toggle[aria-expanded="true"] 
+    .hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
 }
+
