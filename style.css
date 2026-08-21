@@ -3711,3 +3711,99 @@ body {
   color: #74788c;
   font-size: 16px;
 }
+
+
+
+
+
+.hero-btns {
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.hero-btns a {
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.hero-btns a {
+  z-index: 99999 !important;
+}
+
+
+
+
+
+/* ===== FIX HERO BUTTONS DESKTOP ===== */
+
+.hero-btns {
+    position: relative !important;
+    z-index: 999999 !important;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hero-btns a {
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Don't let decorative hero layers block clicks */
+.hero-skyline,
+.hero-gradient-overlay,
+.floating-shape,
+.hero-orb,
+.scroll-indicator {
+    pointer-events: none !important;
+}
+
+
+/* ========================================
+   ALL PRICING CARDS - BUTTON ALIGNMENT
+   ======================================== */
+
+.pricing-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.pricing-content {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+
+/* Push buttons to the bottom */
+.pricing-buttons {
+  margin-top: auto !important;
+  padding-top: 25px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+
+  width: 100% !important;
+}
+
+/* Cards that don't have .pricing-buttons */
+.pricing-content > .pricing-btn {
+  margin-top: auto !important;
+}
+
+/* All pricing buttons */
+.pricing-btn {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Second button */
+.pricing-buttons .details-btn {
+  margin-top: 0 !important;
+}
