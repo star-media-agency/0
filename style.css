@@ -3664,3 +3664,50 @@ body {
 .pricing-card .pricing-buttons {
   margin-top: 20px;
 }
+
+
+
+.details-btn {
+  background: #ffffff !important;
+  color: #7b3ff2 !important;
+  border: 2px solid #7b3ff2 !important;
+}
+
+.details-btn:hover {
+  background: #7b3ff2 !important;
+  color: #ffffff !important;
+}
+
+.map-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.map-location:hover {
+  transform: translateY(-3px);
+}
+
+.map-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.map-location p {
+  margin: 0 0 8px;
+  color: #74788c;
+  font-size: 18px;
+}
+
+.map-location span {
+  color: #74788c;
+  font-size: 16px;
+}
