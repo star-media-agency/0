@@ -2,780 +2,1406 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Creation | Star Media Agency</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>
+        Content Management | Star Media Agency
+    </title>
 
-    <!-- AOS -->
-    <link rel="stylesheet"
-        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <meta
+        name="description"
+        content="Professional social media content management services by Star Media Agency."
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logo.png"
+    >
 
     <!-- Google Font -->
     <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
+
+    <!-- Arabic Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <!-- Main CSS -->
-<link rel="stylesheet" href="service.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="responsive.css"
+    >
+
+
+    <style>
+
+        /* =========================================
+           CONTENT MANAGEMENT CARDS
+        ========================================== */
+
+        .content-offer-card .offer-icon {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff299e,
+                    #7047ff
+                );
+
+            color: #fff;
+
+        }
+
+
+        .content-offer-card .badge {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff299e,
+                    #7047ff
+                );
+
+            color: #fff;
+
+        }
+
+
+        .content-offer-card .offer-btn {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff299e,
+                    #7047ff
+                );
+
+            color: #fff !important;
+
+        }
+
+
+        /* Equal Height */
+
+        .content-offer-card {
+
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .content-offer-card .offer-body {
+
+            display: flex;
+
+            flex-direction: column;
+
+            height: 100%;
+
+        }
+
+
+        .content-offer-card .offer-btn {
+
+            margin-top: auto;
+
+        }
+
+
+        /* Arabic Content */
+
+        .content-offer-card .offer-body,
+        .content-offer-card .offer-top {
+
+            font-family: "Cairo", sans-serif;
+
+        }
+
+
+        .content-offer-card .offer-body {
+
+            text-align: right;
+
+        }
+
+
+        .content-offer-card .features-list {
+
+            padding-right: 0;
+
+        }
+
+
+        /* =========================================
+           CONTENT HERO ICON
+        ========================================== */
+
+        .content-page-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff299e,
+                    #7047ff
+                );
+
+            color: #fff;
+
+            font-size: 28px;
+
+            box-shadow:
+                0 12px 30px
+                rgba(112, 71, 255, .22);
+
+        }
+
+
+        /* =========================================
+           3 MONTHS SPECIAL CARD
+        ========================================== */
+
+        .three-month-card {
+
+            border:
+                2px solid
+                rgba(112, 71, 255, .35);
+
+        }
+
+
+        .three-month-card .special-offer {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 41, 158, .08),
+                    rgba(112, 71, 255, .08)
+                );
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 767px) {
+
+            .content-offer-card .offer-body {
+
+                text-align: right;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-            NAVBAR
-    ========================== -->
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+
         <div class="container">
 
-<a class="navbar-brand" href="../index.html">
-    <img src="../assets/logo.png" alt="Star Media Logo" class="logo">
-</a>
+            <!-- Logo -->
 
-            <button class="navbar-toggler" data-bs-toggle="collapse"
-                data-bs-target="#navbar">
+            <a
+                class="navbar-brand"
+                href="index.html"
+            >
 
-                <i class="fa-solid fa-bars"></i>
+                <img
+                    src="assets/logo.png"
+                    alt="Star Media Agency"
+                >
+
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button
+                class="navbar-toggler mobile-toggle"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#nav"
+                aria-controls="nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="hamburger">
+
+                    <span></span>
+
+                    <span></span>
+
+                    <span></span>
+
+                </span>
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbar">
 
-                <ul class="navbar-nav ms-auto">
+            <!-- Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="nav"
+            >
+
+                <ul class="navbar-nav navbar-center">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
                             Home
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#services">
+
+                        <a
+                            class="nav-link"
+                            href="index.html#services"
+                        >
                             Services
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#portfolio">
-                            Portfolio
+
+                        <a
+                            class="nav-link active"
+                            href="content-management.html"
+                        >
+                            Content Management
                         </a>
+
                     </li>
 
+
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">
+
+                        <a
+                            class="nav-link"
+                            href="index.html#pricing"
+                        >
+                            Pricing
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html#contact"
+                        >
                             Contact
                         </a>
+
                     </li>
 
                 </ul>
 
+
+                <div class="navbar-cta">
+
+                    <a
+                        class="talk-btn"
+                        target="_blank"
+                        href="https://wa.me/201030939852"
+                    >
+
+                        Let's Talk
+
+                        <i
+                            class="fa-solid fa-arrow-up-right-from-square"
+                        ></i>
+
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
+
     </nav>
 
-    <!-- =========================
-            HERO
-    ========================== -->
 
-    <section class="service-hero">
+
+    <!-- =========================================
+         CONTENT MANAGEMENT
+    ========================================== -->
+
+    <section
+        class="section"
+        id="content-management"
+    >
 
         <div class="container">
 
-            <div class="row align-items-center">
 
-                <!-- Left -->
+            <div class="section-head">
 
-                <div class="col-lg-6"
-                    data-aos="fade-right">
+                <div class="mini">
+                    Content Management
+                </div>
 
-                    <span class="hero-tag">
 
-                        <i class="fa-solid fa-hashtag"></i>
+                <div class="content-page-icon">
 
-                        Content Creation
+                    <i class="fa-solid fa-chart-line"></i>
 
+                </div>
+
+
+                <h2>
+
+                    إدارة محتوى
+
+                    <span class="gradient">
+                        احترافية
                     </span>
 
-                    <h1>
+                </h2>
 
-                        Create Content That
-                        <span>Builds Your Brand</span>
 
-                    </h1>
+                <p>
+                    حلول متكاملة لإدارة محتوى صفحاتك
+                    والحفاظ على حضور قوي ومنظم على
+                    منصات التواصل الاجتماعي.
+                </p>
 
-<p>
-    We create engaging and creative content that tells your brand's story,
-    connects with your audience, and keeps your business active online.
-</p>
-                    <div class="hero-buttons">
-
-                        <a href="https://wa.me/201030939852"
-                            class="btn-main">
-
-                            Book now
-                                        <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+            </div>
 
 
 
-                    </div>
+            <div class="row g-4">
 
-                </div>
 
-                <!-- Right -->
+                <!-- =================================
+                     WEEKLY MANAGEMENT
+                ================================== -->
 
-                <div class="col-lg-6"
-                    data-aos="fade-left">
+                <div class="col-lg-4 col-md-6">
 
-                    <div class="hero-card">
+                    <article
+                        class="offer-card content-offer-card"
+                    >
 
-                        <div class="hero-icon">
 
-                            <i class="fa-solid fa-hashtag"></i>
+                        <div class="offer-top">
+
+
+                            <div class="offer-icon">
+
+                                <i
+                                    class="fa-solid fa-calendar-week"
+                                ></i>
+
+                            </div>
+
+
+                            <span class="badge">
+
+                                أسبوعي
+
+                            </span>
+
+
+                            <h3>
+
+                                إدارة محتوى أسبوعية
+
+                            </h3>
+
 
                         </div>
 
-                        <h3>
 
-                            Content Creation
 
-                        </h3>
+                        <div class="offer-body">
 
-                        <p>
 
-                            Facebook • Instagram • TikTok
-                            Content Strategy • Reels
-                            Community Management
+                            <h4>
 
-                        </p>
+                                إدارة صفحاتك لمدة أسبوع
 
-                        <div class="hero-stats">
+                            </h4>
 
-                            <div>
 
-                                <h4>500+</h4>
+                            <p>
 
-                                <span>Clients</span>
+                                باقة مناسبة للصفحات التي تحتاج
+                                إلى محتوى مستمر ومنظم بشكل أسبوعي،
+                                مع تصميمات وكتابة محتوى جاهزة للنشر.
+
+                            </p>
+
+
+                            <h5>
+
+                                تشمل:
+
+                            </h5>
+
+
+                            <ul class="features-list">
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    7 بوستات
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    7 تصميمات احترافية
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    كتابة المحتوى
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    7 Stories
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    تنظيم وجدولة المحتوى
+
+                                </li>
+
+
+                            </ul>
+
+
+
+                            <div class="special-offer">
+
+
+                                <div class="offer-label">
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+
+                                    <span>
+                                        عرض خاص
+                                    </span>
+
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+                                </div>
+
+
+
+                                <div class="offer-content">
+
+
+                                    <span class="offer-title">
+
+                                        إدارة محتوى أسبوعية
+
+                                    </span>
+
+
+                                    <div class="price">
+
+
+                                        <span class="new">
+
+                                            1,500 جنيه
+
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
 
                             </div>
 
-                            <div>
 
-                                <h4>97%</h4>
 
-                                <span>Satisfaction</span>
+                            <p class="service-note">
 
-                            </div>
+                                إدارة محتوى احترافية لمدة أسبوع
+                                للحفاظ على نشاط صفحتك.
 
-                            <div>
+                            </p>
 
-                                <h4>1.5M+</h4>
 
-                                <span>Reach</span>
 
-                            </div>
+                            <a
+                                class="offer-btn"
+                                target="_blank"
+                                href="https://wa.me/201030939852?text=Hello%20Star%20Media%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%D9%8A%D8%A9"
+                            >
+
+                                احصل على العرض الآن
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                ></i>
+
+                            </a>
+
 
                         </div>
 
-                    </div>
+                    </article>
 
                 </div>
+
+
+
+                <!-- =================================
+                     MONTHLY MANAGEMENT
+                ================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <article
+                        class="offer-card content-offer-card"
+                    >
+
+
+                        <div class="offer-top">
+
+
+                            <div class="offer-icon">
+
+                                <i
+                                    class="fa-solid fa-calendar-days"
+                                ></i>
+
+                            </div>
+
+
+                            <span class="badge">
+
+                                الأكثر طلبًا
+
+                            </span>
+
+
+                            <h3>
+
+                                إدارة محتوى شهرية
+
+                            </h3>
+
+
+                        </div>
+
+
+
+                        <div class="offer-body">
+
+
+                            <h4>
+
+                                إدارة صفحاتك لمدة شهر
+
+                            </h4>
+
+
+                            <p>
+
+                                إدارة متكاملة للمحتوى طوال الشهر،
+                                مع خطة منظمة وتصميمات احترافية
+                                تساعد على بناء حضور قوي للبراند.
+
+                            </p>
+
+
+                            <h5>
+
+                                تشمل:
+
+                            </h5>
+
+
+                            <ul class="features-list">
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    20 بوست
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    20 تصميم احترافي
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    كتابة المحتوى
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    20 Stories
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    2 فيديو AI Reels
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    تنظيم وجدولة المحتوى
+
+                                </li>
+
+
+                            </ul>
+
+
+
+                            <div class="special-offer">
+
+
+                                <div class="offer-label">
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+
+                                    <span>
+                                        عرض خاص
+                                    </span>
+
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+                                </div>
+
+
+
+                                <div class="offer-content">
+
+
+                                    <span class="offer-title">
+
+                                        إدارة محتوى شهرية
+
+                                    </span>
+
+
+                                    <div class="price">
+
+
+                                        <span class="new">
+
+                                            6,000 جنيه
+
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <p class="service-note">
+
+                                إدارة كاملة للمحتوى لمدة شهر
+                                مع تصميمات وكتابة محتوى احترافية.
+
+                            </p>
+
+
+
+                            <a
+                                class="offer-btn"
+                                target="_blank"
+                                href="https://wa.me/201030939852?text=Hello%20Star%20Media%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9"
+                            >
+
+                                احصل على العرض الآن
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                ></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- =================================
+                     3 MONTHS MANAGEMENT
+                ================================== -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <article
+                        class="offer-card content-offer-card three-month-card"
+                    >
+
+
+                        <div class="offer-top">
+
+
+                            <div class="offer-icon">
+
+                                <i
+                                    class="fa-solid fa-calendar-check"
+                                ></i>
+
+                            </div>
+
+
+                            <span class="badge">
+
+                                أفضل قيمة
+
+                            </span>
+
+
+                            <h3>
+
+                                إدارة 3 شهور
+
+                            </h3>
+
+
+                        </div>
+
+
+
+                        <div class="offer-body">
+
+
+                            <h4>
+
+                                إدارة محتوى لمدة 3 شهور
+
+                            </h4>
+
+
+                            <p>
+
+                                الباقة المناسبة للبراندات التي تبحث
+                                عن استمرارية وثبات في المحتوى وبناء
+                                حضور قوي ومستمر على السوشيال ميديا.
+
+                            </p>
+
+
+                            <h5>
+
+                                تشمل:
+
+                            </h5>
+
+
+                            <ul class="features-list">
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    إدارة المحتوى لمدة 3 شهور
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    60 بوست
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    60 تصميم احترافي
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    كتابة المحتوى
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    60 Stories
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    6 فيديوهات AI Reels
+
+                                </li>
+
+
+                                <li>
+
+                                    <i
+                                        class="fa-solid fa-check"
+                                    ></i>
+
+                                    تنظيم وجدولة المحتوى
+
+                                </li>
+
+
+                            </ul>
+
+
+
+                            <div class="special-offer">
+
+
+                                <div class="offer-label">
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+
+                                    <span>
+                                        عرض خاص
+                                    </span>
+
+
+                                    <i
+                                        class="fa-solid fa-bolt"
+                                    ></i>
+
+                                </div>
+
+
+
+                                <div class="offer-content">
+
+
+                                    <span class="offer-title">
+
+                                        إدارة محتوى 3 شهور
+
+                                    </span>
+
+
+                                    <div class="price">
+
+
+                                        <span class="old">
+
+                                            18,000 جنيه
+
+                                        </span>
+
+
+                                        <span class="discount-badge">
+
+                                            وفر 3,000 جنيه
+
+                                        </span>
+
+
+                                        <span class="new">
+
+                                            15,000 جنيه
+
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <p class="service-note">
+
+                                أفضل اختيار للاستمرارية وبناء حضور
+                                قوي لعلامتك التجارية.
+
+                            </p>
+
+
+
+                            <a
+                                class="offer-btn"
+                                target="_blank"
+                                href="https://wa.me/201030939852?text=Hello%20Star%20Media%2C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89%20%D9%84%D9%85%D8%AF%D8%A9%203%20%D8%B4%D9%87%D9%88%D8%B1"
+                            >
+
+                                احصل على العرض الآن
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                ></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </article>
+
+                </div>
+
 
             </div>
 
         </div>
-
-        <!-- Floating Shapes -->
-
-        <div class="shape one"></div>
-        <div class="shape two"></div>
-        <div class="shape three"></div>
 
     </section>
 
-    <!-- =========================
-        ABOUT SERVICE
-    ========================== -->
-    <section class="about-service py-5">
 
-    <div class="container">
 
-        <div class="row align-items-center g-5">
+    <!-- =========================================
+         CTA SECTION
+    ========================================== -->
 
-            <!-- Left -->
+    <section class="cta-section">
 
-            <div class="col-lg-6" data-aos="fade-right">
+        <div class="container">
 
-                <span class="section-badge">
-                    About Our Service
-                </span>
+            <div class="cta-box">
 
-                <h2 class="section-title">
-                    We Don't Just Create Content...
-                    <span>We Tell Your Story</span>
+
+                <h2>
+
+                    جاهز تطور
+
+                    <span class="gradient">
+                        محتوى صفحتك؟
+                    </span>
+
                 </h2>
 
-                <p class="section-text">
-
-At Star Media Agency, we create engaging and creative content that helps your brand connect with its audience, communicate its message, and build a strong online presence.
-                </p>
-
-                <p class="section-text">
-
-From content planning and creative ideas to captions, reels, and social media content, we create everything your brand needs to stay active, relevant, and engaging.
-                </p>
-
-                <div class="row mt-4">
-
-                    <div class="col-6 mb-3">
-
-                        <div class="feature-box">
-
-                            <i class="fa-solid fa-check"></i>
-
-Content Strategy
-                        </div>
-
-                    </div>
-
-                    <div class="col-6 mb-3">
-
-                        <div class="feature-box">
-
-                            <i class="fa-solid fa-check"></i>
-
-Creative Ideas
-                        </div>
-
-                    </div>
-
-                    <div class="col-6 mb-3">
-
-                        <div class="feature-box">
-
-                            <i class="fa-solid fa-check"></i>
-
-Engaging Captions
-                        </div>
-
-                    </div>
-
-                    <div class="col-6 mb-3">
-
-                        <div class="feature-box">
-
-                            <i class="fa-solid fa-check"></i>
-
-Reels Planning
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Right -->
-
-            <div class="col-lg-6" data-aos="fade-left">
-
-                <div class="service-image-card">
-
-                    <div class="floating-icon one">
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </div>
-
-                    <div class="floating-icon two">
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </div>
-
-                    <div class="floating-icon three">
-
-                        <i class="fa-brands fa-tiktok"></i>
-
-                    </div>
-
-                    <img src="assets/content.png"
-                        class="img-fluid"
-                        alt="meta advertising service">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-        WHAT WE OFFER
-========================== -->
-
-<section class="services-list py-5">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="section-badge">
-
-                Our Services
-
-            </span>
-
-            <h2 class="section-title">
-
-                Everything You Need to Create Better Content
-
-            </h2>
-
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-calendar-days"></i>
-<h5>Content Planning</h5>
-<p>
-Create a clear content plan based on your brand, audience, goals, and marketing strategy.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-pen"></i>
-<h5>Copywriting</h5>
-<p>
-Write engaging captions and marketing copy that communicate your message and encourage interaction.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-palette"></i>
-<h5>Creative Designs</h5>
-<p>
-Create eye-catching social media designs that match your brand identity and grab your audience’s attention.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-clapperboard"></i>
-<h5>Reels & Video Content</h5>
-<p>
-Create engaging Reels and short-form videos designed to increase reach, engagement, and brand awareness.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-lightbulb"></i>
-<h5>Creative Ideas</h5>
-<p>
-Develop fresh and creative content ideas that keep your audience interested and your brand active.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-mobile-screen-button"></i>
-<h5>Social Media Content</h5>
-<p>
-Create platform-friendly content tailored for Instagram, Facebook, TikTok, and other social media platforms</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-fire"></i>
-<h5>Trend-Based Content</h5>
-<p>
-Use relevant trends, formats, and topics to make your content more engaging and up-to-date.</p>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="offer-card">
-
-<i class="fa-solid fa-chart-column"></i>
-<h5>Content Performance</h5>
-<p>
-Track content performance and engagement to understand what works best and improve future content.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ===================================
-        WHY CHOOSE STAR MEDIA
-==================================== -->
-
-<section class="why-us section-padding">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="section-subtitle">
-
-                WHY CHOOSE US
-
-            </span>
-
-            <h2 class="section-title">
-
-                Why Brands Choose
-                <span>Star Media</span>
-
-            </h2>
-
-            <p class="section-desc">
-
-                    We create strategic, engaging, and consistent content that helps your brand stand out,
-                    connect with the right audience, and build a stronger online presence.            
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Card -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <div class="why-icon">
-                    <i class="fa-solid fa-bullseye"></i>                   
-                    </div>
-
-                    <h5>
-                        Content That Fits Your Brand
-                    </h5>
-
-                    <p>
-                    We create content that matches your brand identity, tone, goals, and target audience.                    
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <div class="why-icon">
-                    <i class="fa-solid fa-lightbulb"></i>                    
-                    </div>
-
-                    <h5>
-                        Creative & Fresh Ideas
-                    </h5>
-
-                    <p>
-                        We develop creative content ideas that keep your audience interested and give your brand a unique voice.                   
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <div class="why-icon">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h5>
-                        Strong Visual Identity
-                    </h5>
-
-                    <p>
-                        We create eye-catching designs and visuals that make your brand look professional and consistent across social media.                    
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="why-card">
-
-                    <div class="why-icon">
-                        <i class="fa-solid fa-chart-line"></i>                    
-                    </div>
-
-                    <h5>
-                        Content That Drives Results
-                    </h5>
-
-                    <p>
-                        We focus on creating valuable and engaging content that increases reach, engagement, brand awareness, and audience growth.                    
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ===================================
-            OUR PROCESS
-==================================== -->
-
-<section class="process section-padding">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="section-subtitle">
-
-                OUR PROCESS
-
-            </span>
-
-            <h2 class="section-title">
-
-                How We Work
-
-            </h2>
-
-        </div>
-
-        <div class="process-wrapper">
-
-            <div class="process-item">
-
-                <div class="number">
-                    01
-                </div>
-
-                <h5>
-                    Discover
-                </h5>
 
                 <p>
-                    Understanding Your Brand
-                    We learn about your brand, goals, target audience, competitors, and the type of content that fits your business.
+
+                    اختار الباقة المناسبة لعلامتك التجارية
+                    وابدأ إدارة محتواك بشكل احترافي.
+
                 </p>
 
-            </div>
 
-            <div class="line"></div>
+                <a
+                    class="cta-btn"
+                    target="_blank"
+                    href="https://wa.me/201030939852?text=I%E2%80%99m%20interested%20in%20your%20Content%20Management%20Services."
+                >
 
-            <div class="process-item">
+                    احصل على عرضك الآن
 
-                <div class="number">
-                    02
-                </div>
+                    <i
+                        class="fa-brands fa-whatsapp"
+                    ></i>
 
-                <h5>
-                    Plan
-                </h5>
+                </a>
 
-                <p>
-                    Building Your Content Strategy
-                    We create a customized content plan with creative ideas, content pillars, formats, and a clear posting direction.                
-                </p>
-
-            </div>
-
-            <div class="line"></div>
-
-            <div class="process-item">
-
-                <div class="number">
-                    03
-                </div>
-
-                <h5>
-                    Create
-                </h5>
-
-                <p>
-                    Bringing Ideas to Life
-                    We create engaging designs, captions, Reels, and visual content that match your brand identity and connect with your audience.                
-                </p>
-
-            </div>
-
-            <div class="line"></div>
-
-            <div class="process-item">
-
-                <div class="number">
-                    04
-                </div>
-
-                <h5>
-                    Optimize
-                </h5>
-
-                <p>
-                    Improving Your Content
-                    We track engagement and content performance, identify what works best, and continuously improve our content strategy.                
-                </p>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- ===================================
-            CTA
-==================================== -->
+    <!-- =========================================
+         FEATURES
+    ========================================== -->
 
-<section class="service-cta">
+    <section class="features">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="cta-box">
+            <div class="row g-4">
 
-            <span>
 
-                Ready To Grow?
+                <div class="col-md-6 col-lg-3">
 
-            </span>
+                    <div class="feature">
 
-            <h2>
+                        <i
+                            class="fa-solid fa-pen-nib"
+                        ></i>
 
-                Let's Build Your Brand Together
+                        <h5>
 
-            </h2>
+                            محتوى إبداعي
 
-            <p>
+                        </h5>
 
-                Start your journey with Star Media Agency
-                and transform your social media into
-                a powerful marketing tool.
+                        <p>
 
-            </p>
+                            محتوى احترافي مناسب
+                            لهوية علامتك التجارية.
 
-            <a href="https://wa.me/201030939852"
-                class="btn-main">
+                        </p>
 
-                Book now
+                    </div>
 
-                <i class="fa-solid fa-arrow-right"></i>
+                </div>
 
-            </a>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature">
+
+                        <i
+                            class="fa-solid fa-palette"
+                        ></i>
+
+                        <h5>
+
+                            تصميمات احترافية
+
+                        </h5>
+
+                        <p>
+
+                            تصميمات جذابة ومناسبة
+                            لمنصات التواصل الاجتماعي.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature">
+
+                        <i
+                            class="fa-solid fa-calendar-check"
+                        ></i>
+
+                        <h5>
+
+                            تنظيم وجدولة
+
+                        </h5>
+
+                        <p>
+
+                            تنظيم المحتوى وجدولته
+                            بشكل مستمر ومنظم.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="feature">
+
+                        <i
+                            class="fa-solid fa-headset"
+                        ></i>
+
+                        <h5>
+
+                            دعم احترافي
+
+                        </h5>
+
+                        <p>
+
+                            تواصل مستمر مع Star Media
+                            لمتابعة المحتوى.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- ===================================
-            FOOTER
-==================================== -->
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
 
-<footer class="footer">
+    <footer class="footer">
 
-    <div class="container text-center">
+        <div class="container text-center">
 
-        <h4>
+            <h4>
 
-            Star Media Agency
+                Star Media Agency
 
-        </h4>
+            </h4>
 
-        <p>
 
-            Digital Marketing • Branding • Meta Ads
+            <small>
 
-        </p>
+                © 2026 Star Media Agency.
+                All Rights Reserved.
 
-        <small>
+            </small>
 
-            © 2026 Star Media Agency.
-            All Rights Reserved.
+        </div>
 
-        </small>
-
-    </div>
-
-</footer>
+    </footer>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
-<script>
 
-AOS.init({
+    <script>
 
-duration:900,
-once:true
+        const nav =
+            document.getElementById('nav');
 
-});
+        const toggle =
+            document.querySelector('.mobile-toggle');
 
-</script>
+
+        nav.addEventListener(
+            'show.bs.collapse',
+            function () {
+
+                toggle.setAttribute(
+                    'aria-expanded',
+                    'true'
+                );
+
+            }
+        );
+
+
+        nav.addEventListener(
+            'hide.bs.collapse',
+            function () {
+
+                toggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+            }
+        );
+
+    </script>
+
 
 </body>
+
 </html>
